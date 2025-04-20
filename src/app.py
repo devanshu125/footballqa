@@ -16,10 +16,6 @@ with open("../prompt_data_folder/system_prompt.txt", encoding="utf-8") as f:
 with open("../prompt_data_folder/table_cols_data.txt", encoding="utf-8") as f:
     table_cols_prompt = f.read()
 
-# read tables info prompt
-with open("../prompt_data_folder/table_prompt.txt", encoding="utf-8") as f:
-    tables_info = f.read()
-
 def send_to_openrouter(req_prompt):
     url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {

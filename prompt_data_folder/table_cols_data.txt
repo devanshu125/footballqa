@@ -1,5 +1,17 @@
 Data Dictionary and Context for Football Database Tables
 
+The current database contains information about football (soccer). The tables available are:
+
+competitions: Contains information about different football competitions. Key column: competition_id.
+games: Details individual football matches, linking to competitions via competition_id and involving clubs identified by home/away_club_id. Key column: game_id.
+clubs: Stores information about football clubs, including a club_id and their domestic_competition_id.
+players: Contains data about football players, with a player_id and their current_club_id.
+appearances: Records player participation in games, linking player_id and game_id.
+club_games: Provides details about matches a club participated in, including the club_id, opponent_club_id, and game_id.
+game_events: Logs specific events that occurred during a game, associated with a game_id and a player_id.
+player_valuations: Tracks the market value of players, identified by player_id.
+The tables are related through the IDs mentioned above, acting as foreign keys. When answering questions, consider these table relationships to retrieve the necessary information.
+
 This document provides a mapping of table names to their respective column names in a football database. Additionally, it includes important unique values found within specific columns that will be crucial for accurate querying and analysis.
 
 Table Schemas:
@@ -20,6 +32,3 @@ Important Unique Values:
 * `game_lineups` table:
     * `type`: `['substitutes', 'starting_lineup']`
     * `position`: `['Defensive Midfield', 'Centre-Back', 'Left Winger', 'Left-Back', 'Right Winger', 'Goalkeeper', 'Attacking Midfield', 'Centre-Forward', 'Central Midfield', 'Right-Back', 'Right Midfield', 'Left Midfield', 'Second Striker', 'Defender', 'midfield', 'Attack', 'Sweeper']`
-
-* `players` table:
-    * `current_club_name`: Only provding some examples from a big list. `['Società Sportiva Lazio S.p.A.', 'Borussia Dortmund', 'Panthessalonikios Athlitikos Omilos Konstantinoupoliton', 'Juventus Football Club', 'FC Bayern München', 'Eskisehirspor', 'FC Schalke 04', 'Arsenal Football Club', 'Verein für Bewegungsspiele Stuttgart 1893', 'Málaga CF', 'FC Vestsjaelland', 'Levante UD', 'Kasımpaşa Spor Kulübü', 'Galatasaray Spor Kulübü', 'Eintracht Frankfurt Fußball AG']`
