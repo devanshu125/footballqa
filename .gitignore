@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# do not commit data
+csv_data_folder/
+db_folder/
+.DS_Store
