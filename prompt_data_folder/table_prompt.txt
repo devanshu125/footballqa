@@ -1,0 +1,11 @@
+The current database contains information about football (soccer). The tables available are:
+
+competitions: Contains information about different football competitions. Key column: competition_id.
+games: Details individual football matches, linking to competitions via competition_id and involving clubs identified by home/away_club_id. Key column: game_id.
+clubs: Stores information about football clubs, including a club_id and their domestic_competition_id.
+players: Contains data about football players, with a player_id and their current_club_id.
+appearances: Records player participation in games, linking player_id and game_id.
+club_games: Provides details about matches a club participated in, including the club_id, opponent_club_id, and game_id.
+game_events: Logs specific events that occurred during a game, associated with a game_id and a player_id.
+player_valuations: Tracks the market value of players, identified by player_id.
+The tables are related through the IDs mentioned above, acting as foreign keys. When answering questions, consider these table relationships to retrieve the necessary information.
